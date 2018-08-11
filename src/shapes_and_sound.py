@@ -6,12 +6,13 @@
 """
 
 from lib.docopt import docopt
-from src.screenHandler import FullscreenWindow
+from src.screenHandler import FullScreenWindow
 
 docopt(__doc__)
 
 if __name__ == '__main__':
-
-    w = FullscreenWindow()
+    label_timeout = 2000000
+    max_elements = 5
+    w = FullScreenWindow(label_timeout, max_elements)
     w.tk.mainloop()
 
